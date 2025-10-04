@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Java Web Compiler</title>
+    <style>
+        /* Apply full background image */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            backdrop-filter: blur(8px);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(12px);
+        }
+
+     textarea {
+    width: 100%;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    padding: 12px;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    resize: vertical;
+    background: rgba(0, 0, 0, 0.4); /* darker background for better contrast */
+    color: #ffffff;
+    font-weight: bold;
+    outline: none;
+}
+
+
+        label {
+            font-weight: bold;
+            color: #fff;
+        }
+
+        button {
+            background-color: #43a047;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2e7d32;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            color: #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    ☕ VerseCode by Ragavi Chinnasamy
+</header>
+
+<div class="container">
+    <form method="post" action="/run">
+        <label for="code">✨ Enter your Java code:</label><br>
+        <textarea name="code" id="code" rows="14">
+// Example: Accepts user input
+import java.util.*;
+public class UserProgram {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println("Input received: " + n);
+    }
+}
+        </textarea>
+
+        <label for="input">📥 Enter input for Scanner:</label><br>
+        <textarea name="input" id="input" rows="4">10</textarea><br>
+
+        <button type="submit">Run Code</button>
+    </form>
+</div>
+
+<footer>
+    🌙 Made with ❤️ by Sugitha | Powered by NanoHTTPD + Java
+</footer>
+
+</body>
+</html>
+
+
+
+
+
