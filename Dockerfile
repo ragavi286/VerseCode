@@ -1,11 +1,10 @@
-FROM openjdk:17
+FROM eclipse-temurin:17
 
 WORKDIR /app
 
 COPY . .
 
-RUN chmod +x mvnw || true
-
-RUN ./mvnw clean package -DskipTests
+RUN mvn -q -e -DskipTests package
 
 CMD ["java", "-jar", "target/WebJavaCompiler-1.0-jar-with-dependencies.jar"]
+
